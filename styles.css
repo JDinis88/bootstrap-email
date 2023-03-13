@@ -1,0 +1,19 @@
+.search-bar{
+    width:50%;
+}
+.categories{
+    background-color: rgb(61, 61, 61);
+}
+.mail{
+    background-color: gray;
+}
+.message{
+    background-color: rgb(199, 199, 199);
+}
+.nav-link{
+    color:rgb(171, 98, 240);
+}
+#navbarNavDropdown{
+    background-color: rgb(61, 61, 61);
+}
+

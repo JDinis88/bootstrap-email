@@ -4,9 +4,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- fontawesome CDN (not used directly but the icon is still taken from fontawesome)-->
+    <script src="https://kit.fontawesome.com/377a763831.js" crossorigin="anonymous"></script>
+    
+    <!-- external CSS -->
+    <link href="styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+    <div class = "container-fluid vh-100 overflow-hidden">
+        
+        <!-- Header -->
+        <div class="row header">
+            <nav class="navbar navbar-dark bg-secondary flex-shrink-1">
+                <!-- Branding -->
+                <a class="navbar-brand d-none d-md-flex" href="#">
+                    <img src="/envelope-open-text-solid.svg" class="d-inline-block align-top" width="35" height="30" alt="">
+                    Bibi Mail
+                </a>
+
+                <!-- Solo logo for small breakpoint -->
+                <a class="navbar-brand d-md-none" href="#">
+                    <img src="/envelope-open-text-solid.svg" class="d-inline-block align-top" width="35" height="30" alt="">
+                </a>
+
+                <!-- Search Bar -->
+                <form class="form-check d-flex search-bar">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+                <!-- Compose -->
+                <button type="button" class="btn btn-dark d-none d-md-flex">Compose</button>
+
+                <!-- Dropdown for small breakpoint -->
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inbox</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tagged</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Important</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sent</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Drafts</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trash</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-dark" href="#">Compose</a>
+                        </li> 
+                    </ul>
+                </div>
+            
+            </nav>
+        </div>
+
+        <!-- Body -->
+        <div class = "row vh-100">
+
+            <!-- Categories -->
+            <div class="d-none d-md-flex col-md-6 col-lg-3 order-0 categories">
+                <ul class="nav flex-column align-self-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inbox</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tagged</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Important</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sent</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drafts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trash</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mail box -->
+            <div class="col-sm-12 col-md-6 col-lg-3 order-1 mail">
+                <div class="list-group p-3">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Bay Valley Tech</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1 d-none d-md-block">FROM: bvt@gmail.com</p>
+                        <small class="d-none d-md-block">This truly is one of the emails of all time.</small>
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Bibi Bonds</h5>
+                            <small>7 days ago</small>
+                        </div>
+                        <p class="mb-1 d-none d-md-block">FROM: bbbonds@towa.com</p>
+                        <small class="d-none d-md-block">Your merch is on it's way</small>
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Hololive</h5>
+                            <small>10 days ago</small>
+                        </div>
+                        <p class="mb-1  d-none d-md-block">FROM: covercorp@gmail.com</p>
+                        <small class="d-none d-md-block">Your application status.</small>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Message display -->
+            <div class="col-sm-12 col-md-12 col-lg-6 order-2 message">
+                <!-- Message -->
+                <h5>Bay Valley Tech</h5>
+                <p>FROM: bvt@gmail.com</p>
+                <small>This truly is one of the emails of all time.<br>
+                    We filled it with pointless text to test things out <br>
+                    Why don't you see what happens<br>
+                </small>
+
+                <!-- Reply box and button -->
+                <div class="form-group">
+                    <label for="reply">Reply</label>
+                    <textarea class="form-control" id="reply" rows="3" placeholder="Reply..."></textarea>
+                    <button class = "btn btn-secondary">Reply</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Boostrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></body>
 </html>
